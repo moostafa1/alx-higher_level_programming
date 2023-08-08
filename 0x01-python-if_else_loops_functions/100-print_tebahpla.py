@@ -8,4 +8,3 @@ for i in reversed(range(97, 123)):
         diff = 32
     else:
         diff = 0
-
