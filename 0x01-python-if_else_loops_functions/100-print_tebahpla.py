@@ -2,7 +2,7 @@
 c = 1
 diff = 0
 for i in reversed(range(97, 123)):
-    print(chr(i - diff), end='')
+    print("{}".format(chr(i - diff)), end='')
     c += 1
     if not c % 2:
         diff = 32
