@@ -15,4 +15,3 @@ if __name__ == "__main__":
     else:
         print("{} {} {} = {}".format(argv[0], argv[1], argv[2],
                         sign_func[argv[1]](int(argv[0]), int(argv[2]))))
-
