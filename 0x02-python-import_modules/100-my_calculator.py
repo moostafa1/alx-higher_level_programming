@@ -5,7 +5,7 @@ if __name__ == "__main__":
 
     sign_func = {'+': add, '-': sub, '*': mul, '/': div}
 
-    argv = argv[1:]
+    argv = argv[1: ]
     if len(argv) != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
