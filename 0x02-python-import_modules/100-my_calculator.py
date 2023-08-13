@@ -3,7 +3,7 @@ if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     from sys import argv
 
-    sign_func = {'+': add, '-': sub, '*': mul, '/': div}
+    sign_func = {'+':add, '-':sub, '*':mul, '/':div}
 
     argv = argv[1:]
     if len(argv) != 3:
@@ -14,4 +14,4 @@ if __name__ == "__main__":
         exit(1)
     else:
         print("{} {} {} = {}".format(argv[0], argv[1], argv[2],
-                        sign_func[argv[1]](int(argv[0]), int(argv[2]))))
+              sign_func[argv[1]](int(argv[0]), int(argv[2]))))
