@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 def square_matrix_map(matrix=[]):
-    return list(map(lambda row: [v**2 for v in row], matrix))
+    return list(map(lambda row: [v**2 for v in row if len(row) > 0], matrix))
