@@ -15,7 +15,8 @@ def roman_to_int(roman_string):
                             signs_lst.insert(idx, 1)
                         else:
                             signs_lst.insert(idx, -1)
-            vals_lst = sum([roman_dict[r]*signs_lst[i] for i, r in enumerate(roman_string)])
+            vals_lst = sum([roman_dict[r]*signs_lst[i]
+                            for i, r in enumerate(roman_string)])
             return vals_lst
     else:
         return 0
