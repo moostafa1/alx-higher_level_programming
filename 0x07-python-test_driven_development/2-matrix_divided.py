@@ -1,6 +1,18 @@
 #!/usr/bin/python3
 
+"""
+Deifnes a function that divides all elements of a matrix
+"""
+
+
 def matrix_divided(matrix, div):
+    """
+    Args:
+    matrix - nested list of numbers
+    div - division factor
+
+    return new matrix with the numbers divided by div
+    """
     try:
         for lst in matrix:
             for n in lst:
