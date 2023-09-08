@@ -14,7 +14,7 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    rem = [". ", "? ", ": ", ".", "?", ":"]
+    rem = [".", "?", ":"]
     for i in rem:
-        text = text.replace(i, "\n\n")
+        text = text.replace(i, i[0]+"\n\n").replace("\n ", "\n")
     print(text, end="")
