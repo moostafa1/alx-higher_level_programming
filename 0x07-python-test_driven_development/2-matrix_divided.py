@@ -13,15 +13,14 @@ def matrix_divided(matrix, div):
 
     return new matrix with the numbers divided by div
     """
-    try:
-        for lst in matrix:
-            for n in lst:
-                if not isinstance(n, (int, float)):
-                    raise TypeError("matrix must be a matrix\
-                            (list of lists) of integers/floats")
-    except TypeError:
-        print("matrix must be a matrix\
-                (list of lists) of integers/floats")
+    if (
+        not isinstance(matrix, list)
+        or not any(isinstance(lst, list) for lst in matrix)
+        or not any(isinstance(x, (int, float)) for row in matrix for x in row)
+            ):
+        raise TypeError(
+                "matrix must be a matrix (list of lists) of integers/floats")
+
     row_len = [len(lst) for lst in matrix]
 
     if len(set(row_len)) != 1:
