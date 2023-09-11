@@ -32,3 +32,26 @@
 >>>
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 4, 7]
+
+
+
+
+>>> my_list.append("hello")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/mostafa/alx-higher_level_programming/0x0A-python-inheritance/1-my_list.py", line 11, in print_sorted
+    print(sorted(self))
+TypeError: '<' not supported between instances of 'str' and 'int'
+>>>
+>>>
+>>> print(my_list)
+[1, 4, 2, 3, 5, 'hello']
+>>> my_list.pop()
+'hello'
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>>
+>>>
+>>> my_list.append(7.8)
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5, 7.8]
