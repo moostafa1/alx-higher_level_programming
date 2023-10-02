@@ -6,6 +6,7 @@ Defines a function that returns list of lists
 
 
 def factorial(num):
+    """returns the factorial of the input number"""
     result = 1
     while num:
         result *= num
@@ -14,6 +15,7 @@ def factorial(num):
 
 
 def pascal_triangle(n):
+    """returns the pascal triangle with the input size"""
     if n <= 0:
         return []
 
