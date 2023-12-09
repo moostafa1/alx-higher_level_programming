@@ -7,6 +7,11 @@ classes in this code
 
 
 class Base:
+    """
+    contains:
+    private attributes: __nb_objects
+    public attributes: id
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
