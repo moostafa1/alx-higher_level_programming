@@ -11,9 +11,9 @@ module.exports = class Square extends square {
           row += 'X';
         } else {
           row += c;
+        }
       }
       console.log(row);
-      }
     }
   }
 };
