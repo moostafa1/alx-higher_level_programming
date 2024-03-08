@@ -17,7 +17,6 @@ if __name__ == '__main__':
             cursor.execute("SELECT * FROM states ORDER BY id")
             data = cursor.fetchall()
 
-
             for row in data:
                 print(row)
 
@@ -26,4 +25,4 @@ if __name__ == '__main__':
 
     finally:
         if con:
-        con.close()
+            con.close()
