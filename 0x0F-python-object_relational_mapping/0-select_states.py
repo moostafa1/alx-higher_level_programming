@@ -17,8 +17,11 @@ if __name__ == '__main__':
             cursor.execute("SELECT * FROM states ORDER BY id")
             data = cursor.fetchall()
 
-            for row in data:
-                print(row)
+            if len(data) == 0:
+                print("No records found.")
+            else:
+                for row in data:
+                    print(row)
 
     except MySQL.Error as e:
         print("failed execution!", e)
