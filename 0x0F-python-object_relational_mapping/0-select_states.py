@@ -12,19 +12,18 @@ if __name__ == '__main__':
                 user=sys.argv[1],
                 passwd=sys.argv[2],
                 db=sys.argv[3])
-    except MySQLdb.Error:
-        print("connection error!")
 
-    cursor = con.cursor()
-
-    try:
-        cursor.execute("SELECT * FROM states ORDER BY states.id")
+    with con.cursor() as cursor:
+        cursor.execute("SELECT * FROM states ORDER BY id")
         data = cursor.fetchall()
+
 
         for row in data:
             print(row)
-    except MySQL.Error:
-        print("failed execution!")
 
-    cursor.close()
-    con.close()
+    except MySQL.Error as e:
+        print("failed execution!", e)
+
+    finally:
+        if con:
+        con.close()
