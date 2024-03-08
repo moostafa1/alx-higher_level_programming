@@ -13,13 +13,13 @@ if __name__ == '__main__':
                 passwd=sys.argv[2],
                 db=sys.argv[3])
 
-    with con.cursor() as cursor:
-        cursor.execute("SELECT * FROM states ORDER BY id")
-        data = cursor.fetchall()
+        with con.cursor() as cursor:
+            cursor.execute("SELECT * FROM states ORDER BY id")
+            data = cursor.fetchall()
 
 
-        for row in data:
-            print(row)
+            for row in data:
+                print(row)
 
     except MySQL.Error as e:
         print("failed execution!", e)
